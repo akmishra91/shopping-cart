@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("src/fonts/OpenSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto-Reguar";
+  src: url("src/fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("src/fonts/Lato-Regular.ttf");
+  font-weight: normal;
+  font-style: normal; }

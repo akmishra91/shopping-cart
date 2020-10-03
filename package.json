@@ -1,0 +1,23 @@
+{
+  "name": "Shopping-Cart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o src/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akmishra91/shopping-cart.git"
+  },
+  "keywords": [],
+  "author": "Abhishek Kumar Mishra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akmishra91/shopping-cart/issues"
+  },
+  "homepage": "https://github.com/akmishra91/shopping-cart#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
