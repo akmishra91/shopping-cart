@@ -1,0 +1,29 @@
+/*! -----------Included Fonts here ---------- */
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("src/fonts/OpenSans-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-Reguar";
+    src: url("src/fonts/Roboto-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Lato-Regular";
+    src: url("src/fonts/Lato-Regular.ttf");
+  }
+  $font-weights :(
+      "regular": 400,
+      "medium": 500,
+      "bold": 700
+  );
+  $primary-font : OpenSans-Regular;
+  $secondary-font : Roboto-Regular;
+
+  /*! ---------- Included Themes here ----------- */
+$website-width: 1280px;
+$primary-color: #A9B2AA;
+$green-shed-color: #8ac926;
+$blue-shed-color: #1982c4;
+$red-shed-color: #bf0603;
+$light-color: #f4f4f4;
+$dark-color: #333;

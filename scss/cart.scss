@@ -1,29 +1,44 @@
+@import 'config';
+@import 'utilities';
+
 * {
     box-sizing: border-box;
 }
-
-/*! -----------Included Fonts here ---------- */
-@font-face {
-    font-family: "OpenSans-Regular";
-    src: url("src/fonts/OpenSans-Regular.ttf");
-  }
-  @font-face {
-    font-family: "Roboto-Reguar";
-    src: url("src/fonts/Roboto-Regular.ttf");
-  }
-  @font-face {
-    font-family: "Lato-Regular";
-    src: url("src/fonts/Lato-Regular.ttf");
-  }
-  $font-weights :(
-      "regular": 400,
-      "medium": 500,
-      "bold": 700
-  );
-  $primary-font : OpenSans-Regular;
-  $secondary-font : Roboto-Regular;
-
-  /*! ---------- Included Themes here ----------- */
  body {
      font-weight: map-get($font-weights, regular );
+     font-family: $primary-font;
+     line-height: 1.6;
+     background: #fff;
+ }
+ ul {
+     list-style: none;
+ }
+ 
+ //header 
+ 
+ //Navigation bar 
+ #header-content {
+     padding-top: 1.5rem;
+     padding-bottom: 1.5rem;
+     ul {
+         display: flex;
+         flex-direction: row;
+         align-items: flex-start;
+         border-top: 3px $primary-color solid;
+         border-bottom: 3px $primary-color solid;
+         padding-top: 1rem;
+         padding-bottom: 1rem;
+         padding-left: 0.5rem;
+     }
+
+     li {
+         flex: 1;
+         text-align: left;
+
+         
+
+     }
+     li.items {
+         background-color: $green-shed-color;
+     }
  }

@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box; }
-
 /*! -----------Included Fonts here ---------- */
 @font-face {
   font-family: "OpenSans-Regular";
@@ -15,5 +12,38 @@
   src: url("src/fonts/Lato-Regular.ttf"); }
 
 /*! ---------- Included Themes here ----------- */
+.container {
+  max-width: 1280px;
+  padding: 0 1rem;
+  margin: auto;
+  overflow: hidden; }
+
+* {
+  box-sizing: border-box; }
+
 body {
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: OpenSans-Regular;
+  line-height: 1.6;
+  background: #fff; }
+
+ul {
+  list-style: none; }
+
+#header-content {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+  #header-content ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border-top: 3px #A9B2AA solid;
+    border-bottom: 3px #A9B2AA solid;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem; }
+  #header-content li {
+    flex: 1;
+    text-align: left; }
+  #header-content li.items {
+    background-color: #8ac926; }
