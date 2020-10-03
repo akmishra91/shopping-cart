@@ -2,21 +2,28 @@
     box-sizing: border-box;
 }
 
+/*! -----------Included Fonts here ---------- */
 @font-face {
     font-family: "OpenSans-Regular";
     src: url("src/fonts/OpenSans-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
   }
   @font-face {
     font-family: "Roboto-Reguar";
     src: url("src/fonts/Roboto-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
   }
   @font-face {
     font-family: "Lato-Regular";
     src: url("src/fonts/Lato-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
   }
+  $font-weights :(
+      "regular": 400,
+      "medium": 500,
+      "bold": 700
+  );
+  $primary-font : OpenSans-Regular;
+  $secondary-font : Roboto-Regular;
+
+  /*! ---------- Included Themes here ----------- */
+ body {
+     font-weight: map-get($font-weights, regular );
+ }
