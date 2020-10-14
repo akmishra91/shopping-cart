@@ -1,3 +1,5 @@
+const findListItems = document.querySelector(".list-of-items");
+
 fetch('https://fakestoreapi.com/products')
             .then(res => res.json())
             .then(arrayOfProducts => renderAllItems(arrayOfProducts))
@@ -13,7 +15,7 @@ function renderOneItem(product){
    const prodList = document.createElement('ul');
    prodList.className = 'product-list';
    prodList.innerHTML = `
-       <div>
+       <div id="${product.id}">
             <img src="${product.image}" class="image" alt="${product.title}">
             <div {class="product-item__content">
             <h2>${product.title}</h2>
@@ -25,30 +27,42 @@ function renderOneItem(product){
     cartContent.append(prodList);
 }
 
-// const productList = {
-//     products = [
+function renderAllCartItems(cartItemsArray){
+    cartItemsArray.forEach(cartItem => renderCartItem(cartItem))
+}
 
-//     ],
+function renderCartItem(cartItem){
+  const list_items = document.createElement("li");
+  list_items.innerHTML = `
+  <p id="pTag"> ${cartItem.product.title} : $${cartItem.product.price}</p>
+  `
+  findListItems.append(list_items);
+}
 
-//     render(){
-//         const renderHook = document.getElementById('cart-content');
-       
+const addButton = prodList.querySelector(".add-item");
+addButton.addEventListner("click", event => {
+    findListItems.innerText = "";
 
-//         for(const prod of this.products){
-//             const prodEL = document.createElement('li');
-//             prodEL.className = 'product-item';
-//             prodEL.innerHTML = `
-//             <div>
-//             <img src="${prod.imageUrl}" alt="${prod.title}" >
-//             <div {class="product-item__content">
-//             <h2>${prod.title}</h2>
-//             <h3>\$${prod.price}</h3>
-//             <p>${prod.description}</p>
-//             <button>Add to Cart</button>
-//             </div>
-//             `;
-//             prodList.append(prodEL);
-//         }
-//         renderHook.append(prodList);
-//     }
-// }
+    fetch('https://fakestoreapi.com/products',{
+            method:"POST",
+            headers: {
+                "Content-Type":"application/json",
+                "Accept":"application/json"
+            },
+            body:JSON.stringify(
+                {
+                    title: product.title,
+                    price: product.price,
+                    description: product.description,
+                    image: product.image,
+                    id: product.id
+                }
+            )
+        })
+            .then(res=>res.json())
+            .then(newCartItem => {
+                cartArray.push(newCartItem);
+                renderAllCartItems(cartArray)
+            })
+
+})
